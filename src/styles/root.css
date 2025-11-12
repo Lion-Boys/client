@@ -1,6 +1,7 @@
+@import "./pretendard.css";
 @import "tailwindcss";
 
-:root {
+: root {
     @apply font-pretendard;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
