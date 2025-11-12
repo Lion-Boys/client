@@ -4,10 +4,15 @@
 
 #### 0. Prerequisites
 
-```bash
-npm install --global corepack@latest
-corepack enable pnpm
-```
+1. Install package manager
+    ```bash
+    npm install --global corepack@latest
+    corepack enable pnpm
+    ```
+2. Add ENV variables
+    ```plaintext
+    VITE_SERVER_HOST=http://...
+    ```
 
 #### 1. Install Dependencies
 ```bash
