@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { useUserFlowStore } from "@/store/useUserFlowStore";
-import { useUiStore } from "@/store/useUIStateStore";
+import { useUiStore, useUserFlowStore } from "@/store";
 import BottomButton from "@/components/BottomButton";
 
 export default function OnboardingGate({ children }: React.PropsWithChildren) {

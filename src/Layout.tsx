@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import OnboardingGate from "./screens/onboarding-gate";
-import { useUiStore } from "./store/useUIStateStore";
+import { useUiStore } from "./store";
+import GlobalHeader from "./components/GlobalHeader";
 
 /**
  * Layout
@@ -15,9 +16,9 @@ export default function Layout() {
 
     return (
         <>
-            {/* <div className="bg-grey-100 h-21.5"></div> */}
+            <GlobalHeader />
             <div
-                className={`w-full max-w-sm sm:max-w-md mx-auto px-5 pt-21.5 h-dvh ${
+                className={`w-full max-w-sm sm:max-w-md mx-auto px-5 pt-13.5 h-dvh ${
                     showGradientBackground && "with-gradient-background"
                 }`}
             >
