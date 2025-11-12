@@ -83,7 +83,7 @@ export default function CreatePartyForm() {
                         required
                     />
 
-                    <div className="w-full flex flex-col items-center gap-3">
+                    <div className="w-full flex flex-col items-center gap-3 mt-11">
                         <div className="flex items-center gap-1">
                             <span className="font-text-base-16_regular text-grey-500">
                                 서비스소개가 궁금하다면
