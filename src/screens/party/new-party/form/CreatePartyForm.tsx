@@ -16,8 +16,25 @@ export default function CreatePartyForm() {
                 hostPhone: "",
             }}
             validationSchema={partySchema}
-            onSubmit={(values, { resetForm }) => {
-                alert(JSON.stringify(values, null, 2));
+            onSubmit={async (values, { resetForm }) => {
+                try {
+                    if (navigator.share) {
+                        await navigator.share({
+                            title: `${values.title || "새 모임"}`,
+                            text: `${values.hostName}님이 새로운 모임에 초대합니다.\n장소: ${values.placeName}\n날짜: ${values.eventDate}`,
+                            url: window.location.href,
+                        });
+                    } else {
+                        await navigator.clipboard.writeText(window.location.href);
+                        alert("링크가 복사되었습니다.");
+                    }
+                    resetForm();
+                } catch (err) {
+                    if ((err as Error).name !== "AbortError") {
+                        console.error("공유 실패:", err);
+                        alert("공유에 실패했습니다.");
+                    }
+                }
                 resetForm();
             }}
         >
