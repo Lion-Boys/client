@@ -4,15 +4,15 @@
     --color-sub: #ffd15d;
     --color-error: #ff0044;
     --color-black: #000000;
-    --color-grey--50: #f8f9fb;
-    --color-grey--100: #edeef1;
-    --color-grey--200: #dce0e4;
-    --color-grey--300: #bec2c8;
-    --color-grey--400: #9ca2a9;
-    --color-grey--500: #80868d;
-    --color-grey--600: #636a71;
-    --color-grey--700: #50575d;
-    --color-grey--800: #3a4046;
-    --color-grey--900_text: #20252a;
-    --color-black--55: #000000;
+    --color-grey-50: #f8f9fb;
+    --color-grey-100: #edeef1;
+    --color-grey-200: #dce0e4;
+    --color-grey-300: #bec2c8;
+    --color-grey-400: #9ca2a9;
+    --color-grey-500: #80868d;
+    --color-grey-600: #636a71;
+    --color-grey-700: #50575d;
+    --color-grey-800: #3a4046;
+    --color-grey-900_text: #20252a;
+    --color-black-55: #000000;
 }
