@@ -1,0 +1,95 @@
+@theme {
+    --font-pretendard: "Pretendard", sans-serif;
+}
+
+@layer utilities {
+    .font-text-2xl24_bold {
+        @apply font-pretendard text-2xl font-bold leading-9;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-2xl24_semibold {
+        @apply font-pretendard text-2xl font-semibold leading-9;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xl20_bold {
+        @apply font-pretendard text-xl font-bold leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xl20_semibold {
+        @apply font-pretendard text-xl font-semibold leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xl20_medium {
+        @apply font-pretendard text-xl font-medium leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-lg18_semibold {
+        @apply font-pretendard text-lg font-semibold leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-lg18_medium {
+        @apply font-pretendard text-lg font-medium leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-lg18_regular {
+        @apply font-pretendard text-lg font-normal leading-7;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-base16_semibold {
+        @apply font-pretendard text-base font-semibold leading-6;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-base16_medium {
+        @apply font-pretendard text-base font-medium leading-6;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-base16_regular {
+        @apply font-pretendard text-base font-normal leading-6;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-sm14_bold {
+        @apply font-pretendard text-sm font-bold leading-5;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-sm14_semibold {
+        @apply font-pretendard text-sm font-semibold leading-5;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-sm14_medium {
+        @apply font-pretendard text-sm font-medium leading-5;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-sm14_regular {
+        @apply font-pretendard text-sm font-normal leading-5;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xs12_semibold {
+        @apply font-pretendard text-xs font-semibold leading-4;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xs12_medium {
+        @apply font-pretendard text-xs font-medium leading-4;
+        letter-spacing: -0.02em;
+    }
+
+    .font-text-xs12_regular {
+        @apply font-pretendard text-xs font-normal leading-4;
+        letter-spacing: -0.02em;
+    }
+}
