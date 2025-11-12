@@ -1,4 +1,7 @@
 @import "./root.css";
+
 @import "./system/text-styles.css";
 @import "./system/colors.css";
 @import "./system/effects.css";
+
+@import "./shared.css";
