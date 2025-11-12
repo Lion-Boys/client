@@ -10,7 +10,7 @@ type UiState = {
 export const useUiStore = create<UiState>((set) => ({
     showGradientBackground: false,
     setShowGradientBackground: (value) => set({ showGradientBackground: value }),
-    headerTitle: "모임 생성",
+    headerTitle: "",
     updateHeader: (title: string, browserTitle?: string) => {
         document.title = browserTitle ?? title;
         set({ headerTitle: title });
