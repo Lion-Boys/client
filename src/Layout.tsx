@@ -18,7 +18,7 @@ export default function Layout() {
         <>
             <GlobalHeader />
             <div
-                className={`w-full max-w-sm sm:max-w-md mx-auto px-5 pt-13.5 h-dvh ${
+                className={`w-full max-w-xl mx-auto px-5 pt-13.5 h-dvh ${
                     showGradientBackground && "with-gradient-background"
                 }`}
             >
