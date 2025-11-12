@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import OnboardingGate from "./features/OnboardingGate";
+import OnboardingGate from "./screens/onboarding-gate";
 import { useUiStore } from "./store/useUIStateStore";
 
 /**
