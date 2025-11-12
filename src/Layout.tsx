@@ -16,6 +16,7 @@ export default function Layout() {
 
     return (
         <>
+            {/* <div className="bg-grey-100 h-21.5"></div> */}
             <div
                 className={`w-full max-w-sm sm:max-w-md mx-auto px-5 pt-21.5 pb-8 h-dvh ${
                     showGradientBackground && "with-gradient-background"
