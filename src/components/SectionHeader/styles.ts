@@ -10,12 +10,12 @@ export const sectionHeaderStyles: Record<
         subtitle: "font-text-base-16_regular text-grey-500 select-none",
     },
     sheet: {
-        container: "w-full flex flex-col gap-3 pt-8 pb-6 select-none",
+        container: "w-full flex flex-col gap-3 select-none",
         title: "font-text-xl-20_bold text-grey-900_text select-none",
         subtitle: "font-text-base-16_regular text-grey-700 select-none",
     },
     centerAccent: {
-        container: "w-full flex flex-col items-center gap-1 select-none",
+        container: "w-full flex flex-col items-center gap-1 pt-8 pb-6 select-none",
         title: "font-text-2xl-24_semibold text-grey-900_text select-none",
         subtitle: "font-text-base-16_medium text-primary-blue select-none",
     },
