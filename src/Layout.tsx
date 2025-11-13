@@ -22,7 +22,7 @@ export default function Layout() {
                     showGradientBackground && "with-gradient-background"
                 }`}
             >
-                <main className="overflow-x-hidden h-full">
+                <main className="overflow-visible h-full">
                     <OnboardingGate>
                         <Outlet />
                     </OnboardingGate>

@@ -8,6 +8,11 @@
         );
         background-size: 100% 279px;
     }
+
+    .card-designed {
+        @apply bg-white rounded-xl;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    }
 }
 
 @layer base {
