@@ -1,7 +1,7 @@
 type CompactButtonProps = React.ComponentProps<"button"> & {
     label: string;
-    icon: React.ReactNode;
-    style: CompactButtonStyle;
+    icon?: React.ReactNode;
+    style?: CompactButtonStyle;
 };
 
 type CompactButtonStyle = "dark" | "light";
@@ -15,12 +15,13 @@ export default function CompactButton({
 }: CompactButtonProps) {
     return (
         <button
-            className={`w-full px-4 h-14 ${
-                style === "dark" ? "bg-grey-800" : "bg-grey-100"
-            } disabled:cursor-not-allowed rounded-xl cursor-pointer
+            className={`${style === "dark" ? "bg-grey-800" : "bg-grey-100"}
+            px-3 py-2 disabled:cursor-not-allowed rounded-xl cursor-pointer
+            flex items-center gap-1
                 ${className}`}
             {...props}
         >
+            {icon}
             <span
                 className={`font-text-sm-14_semibold ${
                     style === "dark" ? "text-white" : "text-grey-800"

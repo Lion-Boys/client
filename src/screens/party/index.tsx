@@ -1,11 +1,22 @@
+import { useEffect, useState } from "react";
+import { useUiStore } from "@/store";
+import { useNavigate } from "react-router-dom";
+import type { PartyRound } from "./types";
 import ExpandableCard from "@/components/ExpandableCard";
 import SectionHeader from "@/components/SectionHeader";
 import RoundSummary from "./components/RoundSummary";
-import { useState } from "react";
-import type { PartyRound } from "./types";
+import CompactButton from "@/components/CompactButton";
+import { PlusCircle } from "@/components/Icons/PlusCircle";
 
 export default function Party() {
-    const [partyRounds, setPartyRounds] = useState<PartyRound[]>([
+    const navigate = useNavigate();
+    const updateHeader = useUiStore((s) => s.updateHeader);
+
+    useEffect(() => {
+        updateHeader("체크인하기");
+    }, [updateHeader]);
+
+    const [partyRounds, _setPartyRounds] = useState<PartyRound[]>([
         {
             title: "1차",
             host: "임도협",
@@ -19,6 +30,10 @@ export default function Party() {
             location: "서울 강남구 논현동 67-89",
         },
     ]);
+
+    function handleNewRoundClick() {
+        navigate("/party/new");
+    }
 
     return (
         <>
@@ -48,6 +63,14 @@ export default function Party() {
                         </ExpandableCard>
                     );
                 })}
+            </div>
+
+            <div className="w-full flex justify-center mt-8">
+                <CompactButton
+                    label="차수 추가하기"
+                    icon={<PlusCircle width={16} height={16} className="text-grey-500" />}
+                    onClick={handleNewRoundClick}
+                />
             </div>
         </>
     );
