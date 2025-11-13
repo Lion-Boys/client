@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Form, Formik } from "formik";
 import { partySchema } from "./partySchema";
 import { PhoneNumberInput, TextInput } from "@/components/FormComponents";
@@ -5,6 +6,8 @@ import { QuestionCircle } from "@/components/Icons/QuestionCircle";
 import Button from "@/components/Button";
 
 export default function CreatePartyForm() {
+    const navigate = useNavigate();
+
     return (
         <Formik
             initialValues={{
@@ -16,26 +19,32 @@ export default function CreatePartyForm() {
                 hostPhone: "",
             }}
             validationSchema={partySchema}
-            onSubmit={async (values, { resetForm }) => {
+            onSubmit={async (values) => {
+                let shouldNavigate = true;
+
                 try {
                     if (navigator.share) {
                         await navigator.share({
                             title: `${values.title || "새 모임"}`,
-                            text: `${values.hostName}님이 새로운 모임에 초대합니다.\n장소: ${values.placeName}\n날짜: ${values.eventDate}`,
+                            text: `${values.hostName}님이 새로운 모임에 초대했습니다.\n장소: ${values.placeName}\n날짜: ${values.eventDate}`,
                             url: window.location.href,
                         });
                     } else {
                         await navigator.clipboard.writeText(window.location.href);
                         alert("링크가 복사되었습니다.");
                     }
-                    resetForm();
                 } catch (err) {
-                    if ((err as Error).name !== "AbortError") {
-                        console.error("공유 실패:", err);
+                    const error = err as Error;
+                    if (error.name === "AbortError") {
+                    } else {
                         alert("공유에 실패했습니다.");
+                        shouldNavigate = false;
+                    }
+                } finally {
+                    if (shouldNavigate) {
+                        navigate("/party");
                     }
                 }
-                resetForm();
             }}
         >
             {({ errors, touched, isValid, dirty, isSubmitting }) => (
