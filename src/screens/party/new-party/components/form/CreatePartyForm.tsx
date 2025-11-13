@@ -2,7 +2,7 @@ import { Form, Formik } from "formik";
 import { partySchema } from "./partySchema";
 import { PhoneNumberInput, TextInput } from "@/components/FormComponents";
 import { QuestionCircle } from "@/components/Icons/QuestionCircle";
-import BottomButton from "@/components/BottomButton";
+import Button from "@/components/Button";
 
 export default function CreatePartyForm() {
     return (
@@ -107,10 +107,12 @@ export default function CreatePartyForm() {
                             </span>
                             <QuestionCircle width={16} height={16} className="text-grey-500" />
                         </div>
-                        <BottomButton
+                        <Button
                             label="초대장 보내기"
                             type="submit"
                             disabled={!isValid || !dirty || isSubmitting}
+                            variant="large"
+                            bottompadding
                         />
                     </div>
                 </Form>

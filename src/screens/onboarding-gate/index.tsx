@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useUiStore, useUserFlowStore } from "@/store";
-import BottomButton from "@/components/BottomButton";
+import Button from "@/components/Button";
 
 export default function OnboardingGate({ children }: React.PropsWithChildren) {
     const hasOnboarded = useUserFlowStore((s) => s.hasOnboarded);
@@ -40,7 +40,7 @@ export default function OnboardingGate({ children }: React.PropsWithChildren) {
                         올인원 회식 정산 시스템
                     </p>
                 </div>
-                <BottomButton onClick={handleStart} label="시작하기" />
+                <Button onClick={handleStart} label="시작하기" variant="large" bottompadding />
             </div>
         );
     }

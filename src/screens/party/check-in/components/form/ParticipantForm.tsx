@@ -1,9 +1,12 @@
 import { Form, Formik } from "formik";
 import { participantSchema } from "./participantSchema";
 import { PhoneNumberInput, TextInput } from "@/components/FormComponents";
-import BottomButton from "@/components/BottomButton";
+import Button from "@/components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function ParticipantForm() {
+    const navigate = useNavigate();
+
     return (
         <Formik
             initialValues={{
@@ -11,9 +14,9 @@ export default function ParticipantForm() {
                 phone: "",
             }}
             validationSchema={participantSchema}
-            onSubmit={(values, { resetForm }) => {
+            onSubmit={(values) => {
                 alert(JSON.stringify(values, null, 2));
-                resetForm();
+                navigate("/party");
             }}
         >
             {({ errors, touched, isValid, dirty, isSubmitting }) => (
@@ -36,11 +39,13 @@ export default function ParticipantForm() {
                         required
                     />
 
-                    <BottomButton
+                    <Button
                         label="참가하기"
                         type="submit"
                         disabled={!isValid || !dirty || isSubmitting}
                         className="mt-11"
+                        variant="large"
+                        bottompadding
                     />
                 </Form>
             )}
