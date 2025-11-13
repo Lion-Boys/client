@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useUiStore } from "@/store";
 import SectionHeader from "@/components/SectionHeader";
-import CreatePartyForm from "./form/CreatePartyForm";
+import CreatePartyForm from "./components/form/CreatePartyForm";
 
 export default function NewParty() {
     const updateHeader = useUiStore((s) => s.updateHeader);
