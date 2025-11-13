@@ -11,9 +11,19 @@ export default function Party() {
                 style="centerAccent"
             />
 
-            <ExpandableCard title="N차" isExpandable defaultExpanded>
-                <RoundSummary kv={{ 주최자: "임도협", 참여인원: "NN명", 장소: "장소장소" }} />
-            </ExpandableCard>
+            <div className="w-full flex flex-col gap-4">
+                <ExpandableCard title="N차" isExpandable defaultExpanded>
+                    <RoundSummary kv={{ 주최자: "임도협", 참여인원: "NN명", 장소: "장소장소" }} />
+                </ExpandableCard>
+
+                <ExpandableCard title="N차" isExpandable defaultExpanded>
+                    <RoundSummary kv={{ 주최자: "임도협", 참여인원: "NN명", 장소: "장소장소" }} />
+                </ExpandableCard>
+
+                <ExpandableCard title="N차" isExpandable defaultExpanded>
+                    <RoundSummary kv={{ 주최자: "임도협", 참여인원: "NN명", 장소: "장소장소" }} />
+                </ExpandableCard>
+            </div>
         </>
     );
 }
