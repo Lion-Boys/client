@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./styles/index.css";
 import Layout from "./Layout.tsx";
 import Home from "./screens/home/index.tsx";
@@ -17,7 +17,8 @@ createRoot(document.getElementById("root")!).render(
                     <Route path="party">
                         <Route index element={<Party />} />
                         <Route path="new" element={<NewParty />} />
-                        <Route path="check-in" element={<CheckIn />} />
+                        <Route path="check-in" element={<Navigate to="/party" replace />} />
+                        <Route path="check-in/:id" element={<CheckIn />} />
                     </Route>
                 </Route>
             </Routes>

@@ -3,21 +3,22 @@ import { useUiStore } from "@/store";
 import SectionHeader from "@/components/SectionHeader";
 import PartySummary from "./components/PartySummary";
 import ParticipantForm from "./components/form/ParticipantForm";
+import { Navigate, useParams } from "react-router-dom";
 
 export default function CheckIn() {
     const updateHeader = useUiStore((s) => s.updateHeader);
+    const { id } = useParams<{ id: string }>();
+    if (!id) {
+        return <Navigate to="/party" replace />;
+    }
 
     useEffect(() => {
-        updateHeader("참가하기");
+        updateHeader("체크인하기");
     }, [updateHeader]);
 
     return (
         <>
-            <SectionHeader
-                title="장기 프로젝트 뒷풀이"
-                subtitle="2025.10.02(목) 18:00"
-                style="centerAccent"
-            />
+            <SectionHeader title={id} subtitle="2025.10.02(목) 18:00" style="centerAccent" />
 
             <div className="w-full flex flex-col gap-22">
                 <PartySummary
