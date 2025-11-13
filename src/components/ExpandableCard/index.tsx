@@ -1,6 +1,5 @@
 import type { ExpandableCardProps } from "./types";
 import { useCollapsible } from "@/hooks/useCollapsible";
-import { expandableCardThemes } from "./theme";
 import { CardHeader } from "./CardHeader";
 import { motion } from "motion/react";
 import { SMOOOTH } from "@/styles/transitions";
