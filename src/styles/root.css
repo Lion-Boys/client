@@ -1,7 +1,8 @@
+@import "./pretendard.css";
 @import "tailwindcss";
 
 :root {
-    @apply font-pretendard;
+    @apply font-pretendard bg-grey-50;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
