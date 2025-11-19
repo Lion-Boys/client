@@ -7,6 +7,7 @@ import Home from "./screens/home/index.tsx";
 import NewParty from "./screens/party/new-party/index.tsx";
 import CheckIn from "./screens/party/check-in/index.tsx";
 import Party from "./screens/party/index.tsx";
+import Settlement from "./screens/party/settlement/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")!).render(
                         <Route path="new" element={<NewParty />} />
                         <Route path="check-in" element={<Navigate to="/party" replace />} />
                         <Route path="check-in/:id" element={<CheckIn />} />
+                        <Route path="settlement" element={<Settlement />} />
                     </Route>
                 </Route>
             </Routes>
